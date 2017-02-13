@@ -51,7 +51,7 @@ class Histogram
         return overflow;
     }
     
-    public double getBinError(int[] hist, int bin) //<<<TASK1.3>>>
+    public double getBinError(int bin) //<<<TASK1.3>>>
     {
         return Math.sqrt(hist[bin]);
     }
@@ -67,14 +67,14 @@ class Histogram
     }
     
     public void print() //<<<TASK1.5>>>
-    {
+    {   //Prints relavent histogram information to console
         for(int i= 0; i< SIZE; i++)
-            {
+            {   
                 System.out.println("Bin " +i+ " contents is: " +hist[i]);
             }
-        System.out.println("Number of times the histogram has been filled:"+getNfilled());
+        System.out.println("Number of histogram fill attempts: "+getNfilled());
         System.out.println("The sum of all the bins is: "+getIntegral());
-        System.out.println("The overflows are: "+getOverflow()+" and underflows "+getUnderflow());
+        System.out.println("The overflows are: "+getOverflow()+" and underflows: "+getUnderflow());
     }
     
     public void writeToDisk(String filename) throws IOException //<<<TASK2.1>>
@@ -85,21 +85,26 @@ class Histogram
         // Write the file as a comma seperated file (.csv) so it can be read it into EXCEL
         // first some general information about the histogram
         outputFile.println("Binlow , " + binlow);     // note the comma in the text here <<<TASK2.1>>
-    	outputFile.println("Binint , " + binsize); //<<<TASK2.1>>
-    	outputFile.println("nbins  , " + SIZE);    //<<<TASK2.1>>
+        outputFile.println("Binint , " + binsize); //<<<TASK2.1>>
+        outputFile.println("nbins  , " + SIZE);    //<<<TASK2.1>>
+        outputFile.println("Trials , " + getNfilled());
+        outputFile.println("Integral , " + getIntegral());
+        outputFile.println("Overflows , " + getOverflow());
+        outputFile.println("Underflows , " + getUnderflow());
+        outputFile.println("bin# , bin_centre , counts , error");
     
-    	// now make a loop to write the contents of each bin to disk, one number at a time
-    	// together with the x-coordinate of the centre of each bin.
-    	for (int n = 0; n < SIZE; n++) 
-    	{
-    	    // calculate the x coordinate of the centre of each bin
-    	    double binCentre = binlow + binsize/2 + n*binsize; //<<<TASK2.1>>
-    	    // comma separated values
-    	    outputFile.println(n + "," + binCentre + "," + hist[n]); //<<<TASK2.1>>
-    	}
-    	outputFile.close(); // close the output file
-    	System.out.println("Data written to disk in file " + filename +"\n\n");
-    	return;
+        // now make a loop to write the contents of each bin to disk, one number at a time
+        // together with the x-coordinate of the centre of each bin.
+        for (int n = 0; n < SIZE; n++) 
+        {
+            // calculate the x coordinate of the centre of each bin
+            double binCentre = binlow + binsize/2 + n*binsize; //<<<TASK2.1>>
+            // comma separated values
+            outputFile.println(n + "," + binCentre + "," + hist[n] + "," + getBinError(n)); //<<<TASK2.1>>
+        }
+        outputFile.close(); // close the output file
+        System.out.println("Data written to disk in file " + filename +"\n\n");
+        return;
     }
     
     //----------------------------------------
@@ -112,8 +117,8 @@ class Histogram
             // add 1 to the correct bin
             int bin = (int) ( (value - binlow)/binsize);
             hist[bin]++;
-            nfilled++; //<<<TASK1.1>>>
         }
+        nfilled++; //<<<TASK1.1>>>
     }
 
     //-------------------------------------

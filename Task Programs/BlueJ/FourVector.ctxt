@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=
+comment0.target=FourVector()
+comment1.params=i
+comment1.target=double\ GetElement(int)
+comment2.params=i\ value
+comment2.target=void\ SetElement(int,\ double)
+comment3.params=
+comment3.target=double\ momentum()
+comment4.params=
+comment4.target=double\ mass()
+comment5.params=vec2
+comment5.target=FourVector\ add(FourVector)
+comment6.params=screen
+comment6.target=void\ Print(java.io.PrintWriter)
+comment7.params=screen\ keyboard
+comment7.target=void\ Input(java.io.PrintWriter,\ java.io.BufferedReader)
+numComments=8

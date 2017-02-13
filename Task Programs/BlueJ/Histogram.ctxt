@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=size\ low\ high
+comment0.target=Histogram(int,\ double,\ double)
+comment1.params=
+comment1.target=int\ getSize()
+comment2.params=value
+comment2.target=void\ fill(double)
+comment3.params=nbin
+comment3.target=int\ getContent(int)
+numComments=4

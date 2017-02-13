@@ -36,7 +36,7 @@ class MakeHistograms
 	}
 	screen.println("The number of trials = " + trials
 		       + " , the sum of the contents = " + sum );
-	
+	screen.println("DEBUG: \n INTEGRAL: " + hist.getIntegral()+"\n NFILLED: "+hist.getNfilled());
 	// hist.writeToDisk("test.csv"); // method does not exist yet
     }
 }

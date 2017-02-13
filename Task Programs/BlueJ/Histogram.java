@@ -77,7 +77,7 @@ class Histogram
         System.out.println("The overflows are: "+getOverflow()+" and underflows "+getUnderflow());
     }
     
-    private void writeToDisk(String filename) throws IOException //<<<TASK2.1>>
+    public void writeToDisk(String filename) throws IOException //<<<TASK2.1>>
     {
         FileWriter file = new FileWriter(filename);     // this creates the file with the given name
         PrintWriter outputFile = new PrintWriter(file); // this sends the output to file1
@@ -98,7 +98,7 @@ class Histogram
     	    outputFile.println(n + "," + binCentre + "," + hist[n]); //<<<TASK2.1>>
     	}
     	outputFile.close(); // close the output file
-    	System.out.println("Data written to disk in file " + filename);
+    	System.out.println("Data written to disk in file " + filename +"\n\n");
     	return;
     }
     

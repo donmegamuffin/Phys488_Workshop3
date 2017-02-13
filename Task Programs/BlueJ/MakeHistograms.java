@@ -20,7 +20,7 @@ class MakeHistograms
     public static void main (String [] args ) throws IOException
     {       
 	// create an instance of the Class Histogram: 20 bins from 0.0 to 1.0
-	Histogram hist = new Histogram(20, 0.0, 1.0);      
+	Histogram hist = new Histogram(20, 0.4, 0.9);      
 	
 	screen.println( "Input the number of random numbers to generate");
 	int trials = new Integer(keyboard.readLine()).intValue();
@@ -28,15 +28,7 @@ class MakeHistograms
 	    double value = randGen.nextDouble();
 	    hist.fill(value);
 	}
-
-	long sum = 0;
-	for (int bin = 0; bin < hist.getSize(); bin++) {
-	    screen.println("Bin " + bin + " = " + hist.getContent(bin));
-	    sum = sum + hist.getContent(bin);
-	}
-	screen.println("The number of trials = " + trials
-		       + " , the sum of the contents = " + sum );
-	screen.println("DEBUG: \n INTEGRAL: " + hist.getIntegral()+"\n NFILLED: "+hist.getNfilled());
+	hist.print();
 	// hist.writeToDisk("test.csv"); // method does not exist yet
     }
 }

@@ -66,14 +66,41 @@ class Histogram
         return sum;
     }
     
-    public void print()
+    public void print() //<<<TASK1.5>>>
     {
         for(int i= 0; i< SIZE; i++)
             {
                 System.out.println("Bin " +i+ " contents is: " +hist[i]);
             }
+        System.out.println("Number of times the histogram has been filled:"+getNfilled());
+        System.out.println("The sum of all the bins is: "+getIntegral());
+        System.out.println("The overflows are: "+getOverflow()+" and underflows "+getUnderflow());
     }
     
+    private void writeToDisk(String filename) throws IOException //<<<TASK2.1>>
+    {
+        FileWriter file = new FileWriter(filename);     // this creates the file with the given name
+        PrintWriter outputFile = new PrintWriter(file); // this sends the output to file1
+
+        // Write the file as a comma seperated file (.csv) so it can be read it into EXCEL
+        // first some general information about the histogram
+        outputFile.println("Binlow , " + binlow);     // note the comma in the text here <<<TASK2.1>>
+    	outputFile.println("Binint , " + binsize); //<<<TASK2.1>>
+    	outputFile.println("nbins  , " + SIZE);    //<<<TASK2.1>>
+    
+    	// now make a loop to write the contents of each bin to disk, one number at a time
+    	// together with the x-coordinate of the centre of each bin.
+    	for (int n = 0; n < SIZE; n++) 
+    	{
+    	    // calculate the x coordinate of the centre of each bin
+    	    double binCentre = binlow + binsize/2 + n*binsize; //<<<TASK2.1>>
+    	    // comma separated values
+    	    outputFile.println(n + "," + binCentre + "," + hist[n]); //<<<TASK2.1>>
+    	}
+    	outputFile.close(); // close the output file
+    	System.out.println("Data written to disk in file " + filename);
+    	return;
+    }
     
     //----------------------------------------
     public void fill(double value)

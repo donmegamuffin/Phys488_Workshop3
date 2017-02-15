@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.13)  13 FEB 2017 23:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2017.2.15)  15 FEB 2017 17:25
 entering extended mode
 **./Week3.tex
 (Week3.tex
@@ -418,7 +418,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <5> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
  [1
 
-{C:/Users/sgzhumph/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 56.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
@@ -451,25 +451,60 @@ Overfull \hbox (12.17047pt too wide) in paragraph at lines 148--149
 [][][][][][][][][][][][][][][][][] 
  []
 
-[4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
+[4] <Random_Graph.png, id=155, 353.82187pt x 199.49532pt>
+File: Random_Graph.png Graphic file (type png)
+
+<use Random_Graph.png>
+Package pdftex.def Info: Random_Graph.png used on input line 189.
+(pdftex.def)             Requested size: 353.821pt x 199.49481pt.
+
+Overfull \hbox (8.821pt too wide) in paragraph at lines 189--190
+[][] 
+ []
+
+<Gauss_graph.png, id=156, 345.54094pt x 201.00093pt>
+File: Gauss_graph.png Graphic file (type png)
+ <use Gauss_graph.png>
+Package pdftex.def Info: Gauss_graph.png used on input line 195.
+(pdftex.def)             Requested size: 345.54008pt x 201.00043pt.
+
+Overfull \hbox (0.54008pt too wide) in paragraph at lines 195--196
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 67.40042pt on input line 259.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<d_Graph.png, id=157, 337.26pt x 206.27063pt>
+File: d_Graph.png Graphic file (type png)
+ <use d_Graph.png>
+Package pdftex.def Info: d_Graph.png used on input line 263.
+(pdftex.def)             Requested size: 337.25917pt x 206.27011pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 268.
+[5 <./Random_Graph.png>] [6 <./Gauss_graph.png>] [7 <./d_Graph.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 268.
  (Week3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 191.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 191.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 268.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 268.
 Package rerunfilecheck Info: File `Week3.out' has not changed.
-(rerunfilecheck)             Checksum: FBD761D3D5EDA9C4D7185FD6D217D8C1;285.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
+(rerunfilecheck)             Checksum: D2F3A4EA9BA0B4B6EB7031E7D094794B;476.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 268.
  ) 
 Here is how much of TeX's memory you used:
- 8614 strings out of 493335
- 128364 string characters out of 3139251
- 366781 words of memory out of 3000000
- 11947 multiletter control sequences out of 15000+200000
+ 8712 strings out of 493335
+ 129863 string characters out of 3139251
+ 389781 words of memory out of 3000000
+ 11974 multiletter control sequences out of 15000+200000
  10979 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,6n,47p,825b,1276s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,7n,47p,825b,1276s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx5.pfb><C:/Program Files/MiKTe
@@ -487,9 +522,9 @@ ublic/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pf
 b>
-Output written on Week3.pdf (5 pages, 235344 bytes).
+Output written on Week3.pdf (7 pages, 268450 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 117 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 353 PDF objects out of 1000 (max. 8388607)
+ 184 named destinations out of 1000 (max. 500000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
